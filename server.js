@@ -7,7 +7,6 @@ const PORT = process.env.PORT || 3000;
 //Do I have to make multiple models for each collection? or is it one model per database?
 const Exercise = require("./exerciseModel.js");
 const Stats = require("./statsModel.js");
-const Workout = require("./workoutModel.js");
 
 const app = express();
 
