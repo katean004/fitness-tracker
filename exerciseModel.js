@@ -12,27 +12,25 @@ const ExerciseSchema = new Schema({
   //not sure what needs to go in here
   weight: {
     type: Number,
-    trim: true,
-    required: "Weight is required"
+    required: true
   },
 
   //not sure what needs to go in here
   sets: {
     type: Number,
-    unique: true,
-    match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+    required: true
   },
 
   //not sure what needs to go in here
   reps: {
     type: Number,
-    default: Date.now
+    required: true
   },
 
   //not sure what needs to go in here
   duration: {
     type: Number,
-    default: Date.now
+    required: true
   },
 
   exerciseCreated: {
