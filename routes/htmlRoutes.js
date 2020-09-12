@@ -1,21 +1,23 @@
 var express = require('express');
 var router = express.Router();
+var path = require("path");
+
 
 
 // define the home page route
 router.get('/', function (req, res) {
-    res.send('fitness tracker home page')
+    res.sendFile(path.join(__dirname, "../public/home.html"));
 });
 
 // define the exercise route
 router.use('/exercise', function (req, res) {
-    res.send('exercise page')
+    res.sendFile(path.join(__dirname, "../public/exercise.html"));
 });
 
 
 // define the stats route
 router.get('/stats', function (req, res) {
-    res.send('stats page')
+    res.sendFile(path.join(__dirname, "../public/stats.html"));
 });
 
 
