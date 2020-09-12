@@ -7,12 +7,13 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 const htmlRouter = require("./routes/htmlRoutes");
 const apiRouter = require("./routes/apiRoutes");
+const db = mongoose.connection;
 
 
 const PORT = process.env.PORT || 3000;
 
 //Do I have to make multiple models for each collection? or is it one model per database?
-const Exercise = require("./exerciseModel.js");
+const Exercise = require("./models/exerciseModel.js");
 
 const app = express();
 
@@ -25,11 +26,13 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //might have to change the db name depending on what i call it
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true , useUnifiedTopology: true});
 
+db.on("error", error => console.error(error));
+db.once("open", () => console.log("i did it"));
 
 app.use(htmlRouter);
-// app.use(apiRouter);
+app.use(apiRouter);
 
 
 app.listen(PORT, () => {
