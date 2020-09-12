@@ -33,8 +33,6 @@ app.get('/exercise', exerciseRouter);
 
 
 
-
-
 // app.route('/api/workouts')
 //   .get(function (req, res) {
 //     //res.send database (JSON version of workout from Schema from .find())
