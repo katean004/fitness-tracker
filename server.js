@@ -29,7 +29,7 @@ app.use(express.static("public"));
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true , useUnifiedTopology: true});
 
 db.on("error", error => console.error(error));
-db.once("open", () => console.log("i did it"));
+db.once("open", () => console.log("connection success"));
 
 app.use(htmlRouter);
 app.use(apiRouter);
