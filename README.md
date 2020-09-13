@@ -1,6 +1,7 @@
 # Fitness Tracker
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![](https://i.gyazo.com/5bb1b2b1b8198f4b6b0ef7c0a18f6703.png)
 
 
 ## Table of Contents
