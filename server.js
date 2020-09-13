@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //might have to change the db name depending on what i call it
-mongoose.connect(  process.env.MONGODB_URI || 'mongodb://localhost/deep-thoughts',
+mongoose.connect(  process.env.MONGODB_URI,
 {
   useNewUrlParser: true,
   useUnifiedTopology: true,
